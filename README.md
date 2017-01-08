@@ -91,14 +91,13 @@ You should now have `rootfs.tar.gz` in your current directory.
 After removing the old SSH fingerprint from your local machine's `~/.ssh/known_hosts` file, you should now be able to SSH into your droplet.
 
 8. If you need a modules to work:
-    - `wget http://security.debian.org/debian-security/pool/updates/main/l/linux/linux-image-3.2.0-4-amd64_3.2.84-1_amd64.d
-eb`
+    - `wget http://ftp.de.debian.org/debian/pool/main/l/linux/linux-image-3.16.0-4-amd64_3.16.7-ckt25-2_amd64.deb`
     - `apk add dpkg`
     - `apk add tar`
-    - `dpkg-deb -x linux-image-3.2.0-4-amd64_3.2.84-1_amd64.deb /tmp/out/`
+    - `dpkg-deb -x linux-image-3.16.0-4-amd64_3.16.7-ckt25-2_amd64.deb /tmp/out/`
     - `mv /tmp/out/lib/modules/ /lib/`
     - `depmod -a`
-    - `rm linux-image-3.2.0-4-amd64_3.2.84-1_amd64.deb`
+    - `rm linux-image-3.16.0-4-amd64_3.16.7-ckt25-2_amd64.deb`
     - `rm /tmp/out/ -fr`
 
 ## License
