@@ -1,6 +1,6 @@
 # Digital Ocean: Alpine Linux
 
-This guide instructs you on how to put [Alpine Linux](http://alpinelinux.org/) on a [Digital Ocean](https://m.do.co/c/a0f96edad652) (referral link) droplet.
+This guide instructs you on how to put [Alpine Linux](http://alpinelinux.org/) on a [Digital Ocean](https://m.do.co/c/0d49cb62b58b) (referral link for $10) droplet.
 
 ## Requirements
 
