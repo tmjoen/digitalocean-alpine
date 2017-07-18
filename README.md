@@ -20,7 +20,7 @@ This guide instructs you on how to put [Alpine Linux](http://alpinelinux.org/) o
 4. Build the root file system (change `v3.3` to the Alpine version you want to build).
     - `docker run --name alpine-builder docker-alpine-builder -r v3.4`
 5. Copy the root file system from the container.
-    - `docker cp alpine-builder:/rootfs.tar.gz .`
+    - `docker cp alpine-builder:/rootfs.tar.xz .`
 6. (Optional) Clean up builder.
     - `docker rm alpine-builder`
     - `docker rmi docker-alpine-builder`
@@ -33,12 +33,13 @@ You should now have `rootfs.tar.gz` in your current directory.
 1. Create droplet.
     - In your Digital Ocean control panel, click "Create Droplet".
     - Select the "Debian 7.11 x64" image, fill in the rest of your information, and click "Create Droplet".
-2. Transfer `rootfs.tar.gz` to the droplet.
-    - `scp rootfs.tar.gz root@<IP address>:`
+2. Transfer `rootfs.tar.xz` to the droplet.
+    - `scp rootfs.tar.xz root@<IP address>:`
 3. SSH into the droplet.
     - `ssh root@<IP address>`
 4. Inside the droplet, extract the Alpine files onto your hard drive.
-    - `mkdir /alpine`
+    - `apt-get install xz-utils`
+    - `mkdir /alpine`
     - `tar xf rootfs.tar.gz -C /alpine`
     - `poweroff`
 
