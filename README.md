@@ -37,7 +37,8 @@ You should now have `rootfs.tar.gz` in your current directory.
     - `scp rootfs.tar.xz root@<IP address>:`
 3. SSH into the droplet.
     - `ssh root@<IP address>`
-4. Inside the droplet, extract the Alpine files onto your hard drive.
+4. Inside the droplet, extract the Alpine files onto your hard drive. Install xz-utils if necessary.
+
     - `apt-get install xz-utils`
     - `mkdir /alpine`
     - `tar xf rootfs.tar.gz -C /alpine`
